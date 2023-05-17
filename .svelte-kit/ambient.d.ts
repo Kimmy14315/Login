@@ -33,7 +33,6 @@ declare module '$env/static/private' {
 	export const ASTRA_DB_KEYSPACE: string;
 	export const CODECOV_TOKEN: string;
 	export const printful_store_id: string;
-	export const ASTRA_DB_APPLICATION_TOKEN: string;
 	export const printful_token: string;
 	export const GITHUB_API_TOKEN: string;
 	export const LANGUAGE: string;
@@ -57,8 +56,6 @@ declare module '$env/static/private' {
 	export const DESKTOP_SESSION: string;
 	export const ASTRA_API_APPLICATION_TOKEN: string;
 	export const npm_package_json: string;
-	export const ASTRA_DB_CLIENT_ID: string;
-	export const ASTRA_DB_CLIENT_SECRET: string;
 	export const SHELL_SESSION_ID: string;
 	export const OPENAI_API_KEY: string;
 	export const GTK_RC_FILES: string;
@@ -82,7 +79,6 @@ declare module '$env/static/private' {
 	export const ASTRA_API_CLIENT_SECRET: string;
 	export const WINDOWID: string;
 	export const QT_AUTO_SCREEN_SCALE_FACTOR: string;
-	export const ASTRA_REGION: string;
 	export const _: string;
 	export const npm_config_prefix: string;
 	export const oai_secret_key: string;
@@ -90,7 +86,6 @@ declare module '$env/static/private' {
 	export const COLORFGBG: string;
 	export const filebase_token: string;
 	export const zero_ad_path: string;
-	export const FAUNA_CAKE_SERVER_KEY: string;
 	export const TERM: string;
 	export const XDG_SESSION_ID: string;
 	export const pinata_jwt: string;
@@ -106,7 +101,6 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_PATH: string;
 	export const XDG_RUNTIME_DIR: string;
 	export const XCURSOR_THEME: string;
-	export const ASTRA_DB_TOKEN: string;
 	export const dt_mysql_password: string;
 	export const DISPLAY: string;
 	export const LANG: string;
@@ -134,7 +128,6 @@ declare module '$env/static/private' {
 	export const npm_config_init_module: string;
 	export const PWD: string;
 	export const npm_execpath: string;
-	export const ASTRA_CLUSTER_ID: string;
 	export const XDG_DATA_DIRS: string;
 	export const npm_config_global_prefix: string;
 	export const npm_command: string;
@@ -179,7 +172,6 @@ declare module '$env/dynamic/private' {
 		ASTRA_DB_KEYSPACE: string;
 		CODECOV_TOKEN: string;
 		printful_store_id: string;
-		ASTRA_DB_APPLICATION_TOKEN: string;
 		printful_token: string;
 		GITHUB_API_TOKEN: string;
 		LANGUAGE: string;
@@ -203,8 +195,6 @@ declare module '$env/dynamic/private' {
 		DESKTOP_SESSION: string;
 		ASTRA_API_APPLICATION_TOKEN: string;
 		npm_package_json: string;
-		ASTRA_DB_CLIENT_ID: string;
-		ASTRA_DB_CLIENT_SECRET: string;
 		SHELL_SESSION_ID: string;
 		OPENAI_API_KEY: string;
 		GTK_RC_FILES: string;
@@ -228,7 +218,6 @@ declare module '$env/dynamic/private' {
 		ASTRA_API_CLIENT_SECRET: string;
 		WINDOWID: string;
 		QT_AUTO_SCREEN_SCALE_FACTOR: string;
-		ASTRA_REGION: string;
 		_: string;
 		npm_config_prefix: string;
 		oai_secret_key: string;
@@ -236,7 +225,6 @@ declare module '$env/dynamic/private' {
 		COLORFGBG: string;
 		filebase_token: string;
 		zero_ad_path: string;
-		FAUNA_CAKE_SERVER_KEY: string;
 		TERM: string;
 		XDG_SESSION_ID: string;
 		pinata_jwt: string;
@@ -252,7 +240,6 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_PATH: string;
 		XDG_RUNTIME_DIR: string;
 		XCURSOR_THEME: string;
-		ASTRA_DB_TOKEN: string;
 		dt_mysql_password: string;
 		DISPLAY: string;
 		LANG: string;
@@ -280,7 +267,6 @@ declare module '$env/dynamic/private' {
 		npm_config_init_module: string;
 		PWD: string;
 		npm_execpath: string;
-		ASTRA_CLUSTER_ID: string;
 		XDG_DATA_DIRS: string;
 		npm_config_global_prefix: string;
 		npm_command: string;

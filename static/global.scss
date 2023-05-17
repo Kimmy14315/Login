@@ -1,5 +1,17 @@
-$primary-color: #66bfbf !default;
+//$primary-color: #66bfbf !default;
+//$primary-color: #fb678f !default;
 $secondary-color: #f76b8a !default;
+$primary-color: #fac !default;
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+
+//h1, h2, h3, h4, h5, h6 
+h1 {
+  font-family: Parsek, $base-font-family;
+}
+
+
 //$light-color: #ffffff;
 //$dark-color: #111;
 //html {height: 100%;}

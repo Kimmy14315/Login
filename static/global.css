@@ -1,4 +1,8 @@
 @charset "UTF-8";
+h1 {
+  font-family: Parsek, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 body {
   min-height: 100vh;
 }
@@ -413,26 +417,26 @@ html {
 body {
   background: #fff;
   color: #3b4351;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Helvetica Neue", sans-serif;
   font-size: 0.8rem;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: #66bfbf;
+  color: #fac;
   outline: none;
   text-decoration: none;
 }
 a:focus {
-  box-shadow: 0 0 0 0.1rem rgba(102, 191, 191, 0.2);
+  box-shadow: 0 0 0 0.1rem rgba(255, 170, 204, 0.2);
 }
 a:focus, a:hover, a:active, a.active {
-  color: #47abab;
+  color: #ff77ad;
   text-decoration: underline;
 }
 a:visited {
-  color: #8acece;
+  color: #ffddeb;
 }
 
 h1,
@@ -570,22 +574,22 @@ html:lang(zh),
 html:lang(zh-Hans),
 .lang-zh,
 .lang-zh-hans {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
 }
 
 html:lang(zh-Hant),
 .lang-zh-hant {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", "Helvetica Neue", sans-serif;
 }
 
 html:lang(ja),
 .lang-ja {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, "Helvetica Neue", sans-serif;
 }
 
 html:lang(ko),
 .lang-ko {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Malgun Gothic", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Malgun Gothic", "Helvetica Neue", sans-serif;
 }
 
 :lang(zh) ins,
@@ -657,9 +661,9 @@ html:lang(ko),
 .btn {
   appearance: none;
   background: #fff;
-  border: 0.05rem solid #66bfbf;
+  border: 0.05rem solid #fac;
   border-radius: 0.1rem;
-  color: #66bfbf;
+  color: #fac;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8rem;
@@ -675,16 +679,16 @@ html:lang(ko),
   white-space: nowrap;
 }
 .btn:focus {
-  box-shadow: 0 0 0 0.1rem rgba(102, 191, 191, 0.2);
+  box-shadow: 0 0 0 0.1rem rgba(255, 170, 204, 0.2);
 }
 .btn:focus, .btn:hover {
   background: #f76b8a;
-  border-color: #5bbaba;
+  border-color: #ff9bc3;
   text-decoration: none;
 }
 .btn:active, .btn.active {
-  background: #5bbaba;
-  border-color: #4ab2b2;
+  background: #ff9bc3;
+  border-color: #ff81b4;
   color: #fff;
   text-decoration: none;
 }
@@ -698,18 +702,18 @@ html:lang(ko),
   pointer-events: none;
 }
 .btn.btn-primary {
-  background: #66bfbf;
-  border-color: #5bbaba;
+  background: #fac;
+  border-color: #ff9bc3;
   color: #fff;
 }
 .btn.btn-primary:focus, .btn.btn-primary:hover {
-  background: #54b7b7;
-  border-color: #4ab2b2;
+  background: #ff91bd;
+  border-color: #ff81b4;
   color: #fff;
 }
 .btn.btn-primary:active, .btn.btn-primary.active {
-  background: #4db4b4;
-  border-color: #47abab;
+  background: #ff86b7;
+  border-color: #ff77ad;
   color: #fff;
 }
 .btn.btn-primary.loading::after {
@@ -763,10 +767,10 @@ html:lang(ko),
 .btn.btn-link {
   background: transparent;
   border-color: transparent;
-  color: #66bfbf;
+  color: #fac;
 }
 .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link:active, .btn.btn-link.active {
-  color: #47abab;
+  color: #ff77ad;
 }
 .btn.btn-sm {
   font-size: 0.7rem;
@@ -891,8 +895,8 @@ legend {
   width: 100%;
 }
 .form-input:focus {
-  box-shadow: 0 0 0 0.1rem rgba(102, 191, 191, 0.2);
-  border-color: #66bfbf;
+  box-shadow: 0 0 0 0.1rem rgba(255, 170, 204, 0.2);
+  border-color: #fac;
 }
 .form-input::placeholder {
   color: #bcc3ce;
@@ -947,8 +951,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   background: #fff;
 }
 .form-select:focus {
-  box-shadow: 0 0 0 0.1rem rgba(102, 191, 191, 0.2);
-  border-color: #66bfbf;
+  box-shadow: 0 0 0 0.1rem rgba(255, 170, 204, 0.2);
+  border-color: #fac;
 }
 .form-select::-ms-expand {
   display: none;
@@ -1027,14 +1031,14 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
 .form-checkbox input:focus + .form-icon,
 .form-radio input:focus + .form-icon,
 .form-switch input:focus + .form-icon {
-  box-shadow: 0 0 0 0.1rem rgba(102, 191, 191, 0.2);
-  border-color: #66bfbf;
+  box-shadow: 0 0 0 0.1rem rgba(255, 170, 204, 0.2);
+  border-color: #fac;
 }
 .form-checkbox input:checked + .form-icon,
 .form-radio input:checked + .form-icon,
 .form-switch input:checked + .form-icon {
-  background: #66bfbf;
-  border-color: #66bfbf;
+  background: #fac;
+  border-color: #fac;
 }
 .form-checkbox .form-icon,
 .form-radio .form-icon,
@@ -1090,8 +1094,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   width: 6px;
 }
 .form-checkbox input:indeterminate + .form-icon {
-  background: #66bfbf;
-  border-color: #66bfbf;
+  background: #fac;
+  border-color: #fac;
 }
 .form-checkbox input:indeterminate + .form-icon::before {
   background: #fff;
@@ -1324,12 +1328,12 @@ input:disabled + .form-icon, input.disabled + .form-icon {
   padding-right: 0.4rem;
 }
 .label.label-primary {
-  background: #66bfbf;
+  background: #fac;
   color: #fff;
 }
 .label.label-secondary {
   background: #f76b8a;
-  color: #66bfbf;
+  color: #fac;
 }
 .label.label-success {
   background: #32b643;
@@ -1965,7 +1969,7 @@ summary.accordion-header::-webkit-details-marker {
   font-size: 0.8rem;
   height: 1.6rem;
   width: 1.6rem;
-  background: #66bfbf;
+  background: #fac;
   border-radius: 50%;
   color: rgba(255, 255, 255, 0.85);
   display: inline-block;
@@ -2045,7 +2049,7 @@ summary.accordion-header::-webkit-details-marker {
   white-space: nowrap;
 }
 .badge[data-badge]::after, .badge:not([data-badge])::after {
-  background: #66bfbf;
+  background: #fac;
   background-clip: padding-box;
   border-radius: 0.5rem;
   box-shadow: 0 0 0 0.1rem #fff;
@@ -2118,7 +2122,7 @@ summary.accordion-header::-webkit-details-marker {
   height: 0.2rem;
 }
 .bar .bar-item {
-  background: #66bfbf;
+  background: #fac;
   color: #fff;
   display: block;
   font-size: 0.7rem;
@@ -2154,7 +2158,7 @@ summary.accordion-header::-webkit-details-marker {
   z-index: 1;
 }
 .bar-slider .bar-slider-btn {
-  background: #66bfbf;
+  background: #fac;
   border: 0;
   border-radius: 50%;
   height: 0.6rem;
@@ -2166,7 +2170,7 @@ summary.accordion-header::-webkit-details-marker {
   width: 0.6rem;
 }
 .bar-slider .bar-slider-btn:active {
-  box-shadow: 0 0 0 0.1rem #66bfbf;
+  box-shadow: 0 0 0 0.1rem #fac;
 }
 
 .card {
@@ -2223,7 +2227,7 @@ summary.accordion-header::-webkit-details-marker {
   white-space: nowrap;
 }
 .chip.active {
-  background: #66bfbf;
+  background: #fac;
   color: #fff;
 }
 .chip .avatar {
@@ -2311,11 +2315,11 @@ summary.accordion-header::-webkit-details-marker {
 }
 .menu .menu-item > a:focus, .menu .menu-item > a:hover {
   background: #f76b8a;
-  color: #66bfbf;
+  color: #fac;
 }
 .menu .menu-item > a:active, .menu .menu-item > a.active {
   background: #f76b8a;
-  color: #66bfbf;
+  color: #fac;
 }
 .menu .menu-item .form-checkbox,
 .menu .menu-item .form-radio,
@@ -2421,14 +2425,14 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .nav .nav-item a:focus, .nav .nav-item a:hover {
-  color: #66bfbf;
+  color: #fac;
 }
 .nav .nav-item.active > a {
   color: #505c6e;
   font-weight: bold;
 }
 .nav .nav-item.active > a:focus, .nav .nav-item.active > a:hover {
-  color: #66bfbf;
+  color: #fac;
 }
 .nav .nav {
   margin-bottom: 0.4rem;
@@ -2455,7 +2459,7 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .pagination .page-item a:focus, .pagination .page-item a:hover {
-  color: #66bfbf;
+  color: #fac;
 }
 .pagination .page-item.disabled a {
   cursor: default;
@@ -2463,7 +2467,7 @@ summary.accordion-header::-webkit-details-marker {
   pointer-events: none;
 }
 .pagination .page-item.active a {
-  background: #66bfbf;
+  background: #fac;
   color: #fff;
 }
 .pagination .page-item.page-prev, .pagination .page-item.page-next {
@@ -2561,7 +2565,7 @@ summary.accordion-header::-webkit-details-marker {
   position: relative;
 }
 .step .step-item:not(:first-child)::before {
-  background: #66bfbf;
+  background: #fac;
   content: "";
   height: 2px;
   left: -50%;
@@ -2570,13 +2574,13 @@ summary.accordion-header::-webkit-details-marker {
   width: 100%;
 }
 .step .step-item a {
-  color: #66bfbf;
+  color: #fac;
   display: inline-block;
   padding: 20px 10px 0;
   text-decoration: none;
 }
 .step .step-item a::before {
-  background: #66bfbf;
+  background: #fac;
   border: 0.1rem solid #fff;
   border-radius: 50%;
   content: "";
@@ -2591,7 +2595,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 .step .step-item.active a::before {
   background: #fff;
-  border: 0.1rem solid #66bfbf;
+  border: 0.1rem solid #fac;
 }
 .step .step-item.active ~ .step-item::before {
   background: #dadee4;
@@ -2623,12 +2627,12 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .tab .tab-item a:focus, .tab .tab-item a:hover {
-  color: #66bfbf;
+  color: #fac;
 }
 .tab .tab-item.active a,
 .tab .tab-item a.active {
-  border-bottom-color: #66bfbf;
-  color: #66bfbf;
+  border-bottom-color: #fac;
+  color: #fac;
 }
 .tab .tab-item.tab-action {
   flex: 1 0 auto;
@@ -2701,8 +2705,8 @@ summary.accordion-header::-webkit-details-marker {
   width: 100%;
 }
 .toast.toast-primary {
-  background: rgba(102, 191, 191, 0.95);
-  border-color: #66bfbf;
+  background: rgba(255, 170, 204, 0.95);
+  border-color: #fac;
 }
 .toast.toast-success {
   background: rgba(50, 182, 67, 0.95);
@@ -2806,14 +2810,14 @@ summary.accordion-header::-webkit-details-marker {
   }
 }
 .text-primary {
-  color: #66bfbf !important;
+  color: #fac !important;
 }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: #54b7b7;
+  color: #ff91bd;
 }
 a.text-primary:visited {
-  color: #78c7c7;
+  color: #ffc4db;
 }
 
 .text-secondary {
@@ -2894,8 +2898,7 @@ a.text-error:visited {
 }
 
 .bg-primary {
-  background: #66bfbf !important;
-  color: #fff;
+  background: #fac !important;
 }
 
 .bg-secondary {
@@ -3059,7 +3062,7 @@ a.text-error:visited {
 .loading::after {
   animation: loading 500ms infinite linear;
   background: transparent;
-  border: 0.1rem solid #66bfbf;
+  border: 0.1rem solid #fac;
   border-radius: 50%;
   border-right-color: transparent;
   border-top-color: transparent;
@@ -3392,7 +3395,7 @@ a.text-error:visited {
 }
 
 :root {
-  --color-primary: #66bfbf;
+  --color-primary: #fac;
   --color-secondary: #f76b8a;
   --color-light: #fff;
   --color-dark: #303742;

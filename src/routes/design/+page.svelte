@@ -1,4 +1,5 @@
 <script>
+  import { currentCakeDesign } from  "$lib/stores.js"
   import Input from "$lib/components/Input.svelte"
   import { Tabs, Tab, TabList, TabPanel } from 'svelte-tabs'
   import { map, mapObjIndexed } from 'ramda'
@@ -9,18 +10,11 @@
   let { base, icing, layer, topping, color, size, decoration } = mapObjIndexed( (v,k,a) => ({...v,name: k}), data)
   let options = [ size, layer, base, icing, topping, decoration ]
 
+  let getExampleText = (option) => "Example: I would like a cake for my wife's anniversary! What " + option.name + " should I use?"
 </script>
 
-<section class="hero">
-  <div class="hero-body">
-    <h1>Add Mo Na Yan</h1>
-    <p>Joycel please tell me what to put here na po</p>
-  </div>
-</section>
-
-
-  <!--
 <Tabs>
+
   <TabList class="tab tab-block">
     {#each options as option }
       <Tab class="tab-item">{capitalCase(option.name)}</Tab>
@@ -32,55 +26,42 @@
 
       <section class="ai-prompt">
         <label class="form-label" for="textarea-{option.name}">
-        <p><small>This shop is powered by AI! Describe what kind of cake you want and our AI assistant will help you to make a decision!</small></p>
+        <!--<p><small>This shop is powered by AI! Describe what kind of cake you want and our AI assistant will help you to make a decision!</small></p>-->
           <p>Describe what kind of <em>{option.name}</em> you want and the AI Assistant will choose for you! </p>
         </label>
-        <textarea class="form-input" name="ai-prompt-{option.name}" id="textarea-{option.name}">Example: I would like a cake for my wife's anniversary! What kind of {option.name} should I use?</textarea>
+        <textarea class="form-input" name="ai-prompt-{option.name}" id="textarea-{option.name}">{getExampleText(option)}</textarea>
+        <button on:click={()=>{}}>Submit</button>
       </section>
 
       <div class="flex">
       {#each option.choices as choice}
-        <label class="card" style="min-height: 10em;" for={choice.name}>
+        <!--
+        {JSON.stringify(option)}
+        {JSON.stringify($currentCakeDesign)}
+        {$currentCakeDesign[option.name]}
+        {$currentCakeDesign[option.name] === choice.name }
+        -->
+        <label class="card {$currentCakeDesign[option.name] === choice.name ? 'selected' : '' }" style="min-height: 10em;" for={choice.name}>
           <h2>{choice.name}</h2>
           <Input name={option.name} schema={{ enum: map( (x)=>capitalCase(String(x.name)), option.choices) }} id={choice.name} radio single=true value={choice.name} hide />
         </label>
       {/each}
       </div>
-  -->
-      <!--
-      <div class="container"><div class="columns">
-      </div></div>
-      <div class="card">
-      </div>
-      {map(x=>capitalCase(String(x.name)),option.choices)}
-
-      { map( (x)=>capitalCase(x.name), option.choices)  }
-        
-
-
-      {#each option.choices as choice}
-      {/each}
-      {JSON.stringify(option.choices)}
-      {option[]}
     </TabPanel>
   {/each}
 
 </Tabs>
-      -->
 
 
 <style lang="scss">
-  .hero{
-    /*
-    --background-image: url("https://i0.wp.com/www.society19.com/wp-content/uploads/2018/06/chocolate-cake-houston.jpg?fit=1000%2C750&ssl=1");
-    --background-image: url("images/cake.jpg");
-    background: linear-gradient( rgba(0,0,0,.5),rgba(0,0,0,.5) ), var(--background-image);
-    */
-    background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url("https://add-mo-na-yan.vercel.app/cake.jpg") ;
-    background-size: cover;
-    color: var(--color-light);
-    text-align: center;
-    background-attachment: fixed;
+  .selected {
+    box-shadow: 0 0 0em .15em var(--color-primary);
+  }
+  * {
+    transition: all 200ms ease-in-out;
+  }
+  .card:hover {
+    box-shadow: 0 0 0em .15em var(--color-secondary);
   }
   .flex{
     display: flex;
