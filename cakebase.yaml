@@ -1,20 +1,20 @@
 base: 
   prompt: "What kind of cake base should be used for this occasion? You must mention the best option first and you must only choose one from the following list: "
   choices:
-  - name: banana
-    description: This cake is perfect for any occasion where you want to add a touch of warmth and sweetness. Whether you're celebrating a birthday, hosting a brunch, or just want to treat yourself, a slice of banana cake will never disappoint.
+    #  - name: banana
+    #    description: This cake is perfect for any occasion where you want to add a touch of warmth and sweetness. Whether you're celebrating a birthday, hosting a brunch, or just want to treat yourself, a slice of banana cake will never disappoint.
   - name: carrot
     description: Carrot cake is a delectable dessert that will make your taste buds dance with joy! The rich and moist cake is made with a blend of fresh, grated carrots, aromatic spices, and a buttery batter that will melt in your mouth.
   - name: Ube
     description: Also known as purple yam cake, is a sweet treat that will tantalize your taste buds with its unique flavor and stunning appearance.This cake is usually made with ube extract or mashed ube that is mixed into the batter, resulting in a delightful purple hue.
-  - name: caramel
-    description: Our caramel cake is made with rich, moist layers of vanilla sponge cake, filled and frosted with decadent caramel buttercream. The cake is then finished with a generous drizzle of luscious caramel sauce, adding an extra layer of sweetness to every bite
-  - name: mocha
-    description: The base of this cake is a rich, chocolate sponge infused with a bold and aromatic coffee flavor. It's then generously layered with creamy, smooth mocha buttercream, which perfectly balances the chocolate and coffee flavors.
-  - name: mango
-    description: Mango cake is a luscious and mouthwatering dessert that will transport your taste buds to a tropical paradise.
-  - name: strawberry
-    description: The base is made with a moist and fluffy vanilla cake infused with natural strawberry puree that adds a fruity punch to every bite.
+      #  - name: caramel
+      #    description: Our caramel cake is made with rich, moist layers of vanilla sponge cake, filled and frosted with decadent caramel buttercream. The cake is then finished with a generous drizzle of luscious caramel sauce, adding an extra layer of sweetness to every bite
+      #  - name: mocha
+      #    description: The base of this cake is a rich, chocolate sponge infused with a bold and aromatic coffee flavor. It's then generously layered with creamy, smooth mocha buttercream, which perfectly balances the chocolate and coffee flavors.
+      #  - name: mango
+      #    description: Mango cake is a luscious and mouthwatering dessert that will transport your taste buds to a tropical paradise.
+      #  - name: strawberry
+      #    description: The base is made with a moist and fluffy vanilla cake infused with natural strawberry puree that adds a fruity punch to every bite.
   - name: cheesecake
   - name: red velvet 
   - name: icecream 
@@ -27,18 +27,18 @@ icing:
   - name: Chocolate
   - name: Almond
     description: is a delectable frosting that will elevate your cake to new heights of deliciousness. Made with the perfect blend of sweet almond flavor and smooth, creamy texture, this icing is a true delight for your tastebuds.
-  - name: Butter Cream
+  - name: Buttercream
     description: Whether you're looking for a simple and elegant design or a more elaborate and artistic creation, buttercream is the perfect choice for any cake lover.
-  - name: Fondant
-    description: Whether you want a classic white wedding cake or a playful and colorful birthday cake, fondant is the perfect choice.
-  - name: Royal Icing
-    description: Whether you're looking to add a touch of sophistication to a birthday cake or want to create a stunning wedding cake, royal icing is the perfect choice. Its versatile nature and stunning finish make it a go-to for any special occasion.
+      #  - name: Fondant
+      #    description: Whether you want a classic white wedding cake or a playful and colorful birthday cake, fondant is the perfect choice.
+      #  - name: Royal Icing
+      #    description: Whether you're looking to add a touch of sophistication to a birthday cake or want to create a stunning wedding cake, royal icing is the perfect choice. Its versatile nature and stunning finish make it a go-to for any special occasion.
   - name: Ganache
     description: can be used as a filling, frosting, or topping on cakes, cupcakes, and other baked goods. Its rich chocolate flavor pairs well with a wide range of flavors, from sweet and fruity to bold and savory.
-  - name: Powdered sugar
-    description: It is commonly used to create a beautiful dusting on top of cakes, cookies, and pastries.
-  - name: Whipped cream.
-    description: is a velvety and fluffy topping that's made by whipping heavy cream until it becomes light and airy. With its luscious texture and delightful flavor, whipped cream is the perfect accompaniment to any cake
+      #  - name: Powdered sugar
+      #    description: It is commonly used to create a beautiful dusting on top of cakes, cookies, and pastries.
+      #  - name: Whipped cream.
+      #    description: is a velvety and fluffy topping that's made by whipping heavy cream until it becomes light and airy. With its luscious texture and delightful flavor, whipped cream is the perfect accompaniment to any cake
 
 topping:
   prompt: "Which edible toppings should be added to the top? The choices are "

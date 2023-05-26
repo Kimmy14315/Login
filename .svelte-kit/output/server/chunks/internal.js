@@ -107,13 +107,17 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + `/favicon.png" />
+    app: ({ head, body, assets: assets2, nonce, env }) => `<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel='stylesheet' href='` + assets2 + "/global.css'>\n		" + head + '\n    <!--\n    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">\n		<meta name="viewport" content="width=device-width" />\n    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">\n    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">\n    <script src="https://unpkg.com/tweetnacl@1.0.3/nacl-fast.js"><\/script>\n    <script src="https://unpkg.com/tweetnacl-util@0.15.1/nacl-util.js"><\/script>\n\n    <script src="https://unpkg.com/argon2-browser/dist/argon2-bundled.js"><\/script>\n    <script> console.log(argon2)<\/script>\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">\n    <script src="https://unpkg.com/argon2-browser@1.18.0/dist/argon2-bundled.min.js"><\/script>\n    <link rel="stylesheet" href="https://unpkg.com/mgplus@1.1.0-preview.2/dist/mg-plus.min.css">\n    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">\n\n		<div style="display: contents">\n    </div>\n    -->\n\n\n	</head>\n	<body data-sveltekit-preload-data="hover">\n      ' + body + "\n	</body>\n</html>\n",
+    <link rel='stylesheet' href='` + assets2 + `/global.css'>
+    <link href="https://allfont.net/allfont.css?fonts=parsek" rel="stylesheet" type="text/css" />
+    <script>var global = window<\/script>
+		` + head + '\n    <!--\n    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">\n    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">\n    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">\n		<meta name="viewport" content="width=device-width" />\n    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">\n    <script src="https://unpkg.com/tweetnacl@1.0.3/nacl-fast.js"><\/script>\n    <script src="https://unpkg.com/tweetnacl-util@0.15.1/nacl-util.js"><\/script>\n\n    <script src="https://unpkg.com/argon2-browser/dist/argon2-bundled.js"><\/script>\n    <script> console.log(argon2)<\/script>\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">\n    <script src="https://unpkg.com/argon2-browser@1.18.0/dist/argon2-bundled.min.js"><\/script>\n    <link rel="stylesheet" href="https://unpkg.com/mgplus@1.1.0-preview.2/dist/mg-plus.min.css">\n    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">\n\n		<div style="display: contents">\n    </div>\n    -->\n\n\n	</head>\n	<body data-sveltekit-preload-data="hover">\n      ' + body + "\n	</body>\n</html>\n",
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -174,7 +178,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1wzqmu1"
+  version_hash: "mqop4k"
 };
 function get_hooks() {
   return {};

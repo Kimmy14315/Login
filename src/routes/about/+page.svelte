@@ -15,8 +15,8 @@
 <p> You may write a feedback or you can call us.
 
 <div id="contact-details">
-  <p><img src="./phone.svg" alt="phone icon"/><a itemprop="telephone" href="tel:+639777005016">+(63) 9777005016</a>
-  <p><img src="./mail.svg" alt="email icon"/><a itemprop="email" href="mailto:yrellin31@gmail.com">yrellin31@gmail.com</a>
+  <p><img src="/phone.svg" alt="phone icon"/><a itemprop="telephone" href="tel:+639777005016">+(63) 9777005016</a>
+  <p><img src="/mail.svg" alt="email icon"/><a itemprop="email" href="mailto:yrellin31@gmail.com">yrellin31@gmail.com</a>
 </div>
 
 <p>

@@ -1,0 +1,40 @@
+//$primary-color: #66bfbf !default;
+//$primary-color: #fb678f !default;
+$secondary-color: #f76b8a !default;
+$primary-color: #fac !default;
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+
+//h1, h2, h3, h4, h5, h6 
+h1 {
+  font-family: Parsek, $base-font-family;
+}
+
+
+//$light-color: #ffffff;
+//$dark-color: #111;
+//html {height: 100%;}
+body {min-height: 100vh;}
+@import "../node_modules/spectre.css/src/spectre";
+:root{
+  --color-primary: #{$primary-color};
+  --color-secondary: #{$secondary-color};
+  --color-light: #{$light-color};
+  --color-dark: #{$dark-color};
+}
+
+article{padding: 1em;max-width: 40em; margin: 0 auto;}
+* {
+  transition-duration: 200ms;
+}
+/*
+$primary-color: #5755d9 !default;
+$secondary-color: lighten($primary-color, 37.5%) !default;
+
+$dark-color: #303742 !default;
+$light-color: #fff !default;
+
+$border-color: lighten($dark-color, 65%) !default;
+$bg-color: lighten($dark-color, 75%) !default;
+*/

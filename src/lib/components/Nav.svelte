@@ -1,11 +1,14 @@
 <script>
   import { user } from "$lib/stores.js"
+  //  import { favicon } from "../../favicon.png"
 </script>
 
 <header class="navbar">
   <section class="navbar-section">
     <a href="/">
-      <img src="favicon.png" alt="logo" class="logo"/>
+      <!--
+      <img src={favicon} alt="logo" class="logo"/>
+      -->
     </a>
   </section>
   <section class="navbar-section">
@@ -26,7 +29,7 @@
     height: 100%;
   }
   header.navbar{
-    background: var(--color-primary);
+    background: var(--color-secondary);
   }
   header.navbar section{
     height: 100%;

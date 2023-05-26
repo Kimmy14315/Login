@@ -70,10 +70,9 @@
 
 
 <style lang="scss">
-  .hero{
+  .hero {
     /*
     --background-image: url("https://i0.wp.com/www.society19.com/wp-content/uploads/2018/06/chocolate-cake-houston.jpg?fit=1000%2C750&ssl=1");
-    --background-image: url("images/cake.jpg");
     background: linear-gradient( rgba(0,0,0,.5),rgba(0,0,0,.5) ), var(--background-image);
     */
     background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url("https://add-mo-na-yan.vercel.app/cake.jpg") ;

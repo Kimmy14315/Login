@@ -36,11 +36,11 @@ const login =
 <h2>Welcome {$user}</h2>
 <form method="POST" on:submit|preventDefault={login}>
   <label>
-    <img src="user.svg" alt="Icon of User">
+    <img src="/user.svg" alt="Icon of User">
     <input type="text" name="username" bind:value="{username}">
   </label>
   <label>
-    <img src="shield.svg" alt="Icon of a Shield representing password">
+    <img src="/shield.svg" alt="Icon of a Shield representing password">
     <input type="password" name="password" bind:value="{password}">
   </label>
   <button type="submit">Login</button>
