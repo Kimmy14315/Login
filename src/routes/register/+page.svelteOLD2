@@ -1,0 +1,204 @@
+<script>
+  import createSigningKeyPair from "$lib/createSigningKeyPair.js"
+  import { toast } from "$lib/toast.js"
+	import { onMount } from 'svelte'
+  import { user } from "$lib/stores.js"
+  import { pick, pipe, andThen, map, assoc, filter, isNotNil } from 'ramda'
+  import { goto } from '$app/navigation'
+  import { paramCase, camelCase, capitalCase } from "change-case"
+  import post from "$lib/post.js"
+  import Ajv from "ajv"
+  import addFormats from "ajv-formats"
+  import ajvErrors from "ajv-errors"
+  import Input from "$lib/components/Input.svelte"
+///  const ajv = new Ajv({allErrors: true})
+  const ajv = new Ajv()
+  addFormats(ajv)
+//  ajvErrors(ajv)
+  let username, password, confirmPassword, infoMessage, acceptTOU, email, firstName, lastName = ""
+  const baseUrl = "https://add-mo-na-yan.vercel.app"
+  const url = "https://add-mo-na-yan.vercel.app/api/user/register"
+/*
+let form =
+  { email:
+    { name: "email"
+    , type: "email"
+    , validate: ajv.compile({type: "string", format: "email"})
+    }
+  , firstName:
+    { name: "firstName"
+    , type: "text"
+    , validate: ajv.compile({type: "string", minLength: 1})
+    }
+  , lastName:
+    { name: "lastName"
+    , type: "text"
+    , validate: ajv.compile({type: "string", minLength: 1})
+    }
+  , password:
+    { name: "password"
+    , type: "password"
+    , validate: ajv.compile({type: "string", format: "password", minLength: 6})
+    }
+  , confirmPassword:
+    { name: "confirmPassword"
+    , type: "password"
+    , validate: ajv.compile({type: "string", format: "password"})
+    }
+  , acceptTOU:
+    { name: "acceptTOU"
+    , type: "checkbox"
+    , value: false
+    , validate: ajv.compile({type: "boolean", const: true})
+    }
+  }
+ */
+let form =
+  [ { title: "email", type: "string", format: "email", examples: ["johnsmith@proton.me"]}
+  , { title: "firstName", type: "string", minLength: 1, examples: ["John"]}
+  , { title: "lastName", type: "string", minLength: 1, examples: ["Smith"]}
+  , { title: "password", type: "string", format: "password", minLength: 6, examples: ["Sup3r53cr3tP@55w0rd"]}
+  , { title: "confirmPassword", type: "string", format: "password", examples: ["Sup3r53cr3tP@55w0rd"]}
+  , { title: "acceptTOU", type: "boolean", const: true, description: "I accept the Terms of Use & Privacy Policy" }
+  ]
+
+  const register = 
+    async () => {
+
+        /*
+      if ( username.length < 5) {
+        toast("your username must be at least 5 characters")
+        return
+      } else if ( password.length < 6) {
+        toast("your password must be at least 6 characters")
+        return
+      } else if (password !== confirmPassword) {
+        toast("Passwords are not the same.")
+        return
+      } else if (!acceptTOU){
+        toast("Please accept the Terms of Usage")
+        return
+      }
+ */
+
+      //const keyPair = await createSigningKeyPair({username, password})
+      //const response = await post(url,pick(["username", "publicKeyBase64"],keyPair))
+
+        /*
+      const response = await post(url,{username: username, publicKeyBase64: keyPair.publicKeyBase64 })
+      const key = await createSigningKeyPair({username, password})
+      const response = await pipe
+      ( createSigningKeyPair
+      , andThen( x => post(url, pick(["username","publicKeyBase64"],x)))
+      )({username, password})
+      console.log('response')
+      console.log(response)
+      if(response.status === 201) {
+          goto(baseUrl)
+          toast("Registration Successful, logged in as " + username) 
+        }
+      if(response.status !== 201) toast("Registration failed, perhaps the user account is already registered.") 
+      */
+    }
+
+    const getAllErrors =
+      (arr) => {
+        const getErrors =
+          (el) => {
+            el.validate(el.value);
+            
+            return el.validate.errors
+          }
+        return  (filter(isNotNil,map(getErrors,arr)))
+        }
+
+  //  onMount(async () => {form.acceptTOU.value = true; form.acceptTOU.value = false})
+    const handleInput =
+      (formInput) => (e) => {
+          e.target.type = formInput.type
+  //        const x = (formInput.validate(e.target.value))
+//          infoMessage = (formInput.validate.errors[0].message)
+ //         console.log(infoMessage)
+          //infoMessage = (formInput.validate(e.target.value)).errors
+          //          infoMessage = map((x)=>{x.validate(x.value);return x.validate.errors[0].message ? ""},Object.values(form))[0]
+          if(e.target.type === "checkbox" ) formInput.value = e.target.checked
+          const allErrors = getAllErrors(Object.values(form))
+          infoMessage = allErrors[0][0].message
+          console.log(infoMessage)
+
+        }
+
+let inputSchema = {type: "email"}
+</script>
+
+<main><div class="card">
+  
+<form class="form-horizontal" method="POST" on:submit|preventDefault={register}>
+
+  <h1>Register</h1>
+  <h2>Welcome</h2>
+  {infoMessage}
+  
+  {#each form as formInput}
+    
+    <div class="form-group">
+
+      {#if formInput.type !== "boolean"}
+        <div class="col-3 col-sm-12">
+          <label class="form-label" for="input-{paramCase(formInput.title)}">{formInput.description ? formInput.description : capitalCase(formInput.title)}</label>
+        </div>
+        <div class="col-9 col-sm-12">
+          <Input _class="form-input" _id="input-{paramCase(formInput.title)}" name={paramCase(formInput.title)} schema={formInput}/>
+        </div>
+      {:else}
+        <label class="form-checkbox" for="input-acceptTOU">{formInput.description ? formInput.description : capitalCase(formInput.title)}
+          <input type="checkbox" id="input-acceptTOU" name="acceptTOU" />
+          <i class="form-icon"></i>
+        </label>
+      {/if}
+      <!--
+      {#if formInput.type !== "checkbox"}
+        <div class="col-3 col-sm-12">
+          <label class="form-label" for="input-{paramCase(formInput.name)}">{formInput.label ? formInput.label : capitalCase(formInput.name)}</label>
+        </div>
+        <div class="col-9 col-sm-12">
+          <input class="form-input" id="input-{paramCase(formInput.name)}" type="text" name="{formInput.name}" bind:value={formInput.value} on:input={handleInput(formInput)}>
+        </div>
+      {:else}
+        <label class="form-checkbox" for="input-acceptTOU">I accept the Terms of Use & Privacy Policy
+          <input type="checkbox" id="input-acceptTOU" name="acceptTOU" bind:checked={formInput.value} on:input={handleInput(formInput)}/>
+          <i class="form-icon"></i>
+        </label>
+      {/if}
+      -->
+
+    </div>
+    
+  <!--
+  -->
+  {/each}
+
+  <button type="submit" class="btn btn-primary btn-block">Register</button>
+
+</form>
+
+</div></main>
+
+<style lang="scss">
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient( rgba(0,0,0,.5),rgba(0,0,0,.5) ), url("https://wallpapercave.com/wp/wp3980262.jpg");
+    background-size: cover;
+  }
+  .card{
+    min-width: 25em;
+    padding: 2em;
+    background: var(--color-light);
+    margin: 2 auto;
+    border: .3em solid var(--color-primary);
+    border-radius: .2em;
+  }
+</style>

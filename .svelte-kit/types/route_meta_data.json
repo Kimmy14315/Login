@@ -1,0 +1,19 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/design": [
+		"src/routes/design/+page.server.js",
+		"src/routes/+layout.js"
+	],
+	"/login": [
+		"src/routes/+layout.js"
+	],
+	"/register": [
+		"src/routes/+layout.js"
+	]
+}
